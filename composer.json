@@ -1,0 +1,38 @@
+{
+    "name": "pedapp/auth",
+    "description": "auth with phone number",
+    "authors": [
+        {
+            "name": "pedram",
+            "email": "persianped@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5",
+        "tymon/jwt-auth": "0.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "PedApp\\Auth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PedApp\\Auth\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tymon\\JWTAuth\\Providers\\JWTAuthServiceProvider"
+            ],
+            "aliases": {
+                "AuthPedApp": "Tymon\\JWTAuth\\Facades\\JWTAuth"
+            }
+        }
+    },
+    "repositories": [
+        {"type": "composer", "url": "https://repo.packagist.com/pedapp/"},
+        {"packagist.org": false}
+    ]
+}
