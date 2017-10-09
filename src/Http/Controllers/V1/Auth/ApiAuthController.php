@@ -9,7 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Http\Response;
-use AuthPedApp;
+use Auth_PedApp;
 
 
 class ApiAuthController extends Controller
@@ -267,7 +267,7 @@ class ApiAuthController extends Controller
 
         $userDevice->phone_verification_status = true;
         $userDevice->is_active = true;
-        $token = AuthPedApp::registerUserDevice($userDevice);
+        $token = Auth_PedApp::registerUserDevice($userDevice);
 //        $userDevice->setApiToken();
         $userDevice->api_token = $token;
 
