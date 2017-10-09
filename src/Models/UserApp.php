@@ -31,7 +31,7 @@ class UserApp extends Model
     public function userAppInformation(){
         return $this->hasOne(UserInformationApp::class, 'app_user_id', 'id');
     }
-    public function userDevice(){
+    public function userDevices(){
         return $this->hasMany(UserDevice::class, 'app_user_id', 'id');
     }
 
