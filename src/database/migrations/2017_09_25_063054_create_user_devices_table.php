@@ -16,7 +16,7 @@ class CreateUserDevicesTable extends Migration
         Schema::create('user_devices', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('app_user_id')->index()->unsigned();
-            $table->string('uuid')->unique()->index()->nullable();
+            $table->string('uuid' , 191)->unique()->index()->nullable();
             $table->enum('device_type' , ['android' , 'ios'])->nullable();
             $table->string('notification_token')->nullable();
             $table->string('verification_code')->nullable();
